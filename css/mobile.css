@@ -1,0 +1,12 @@
+
+
+@media (max-width: 800px) {
+  .tela .title {
+    font-size: 1.4rem;
+    margin-left: 10px;
+  }
+  .tela .text {
+    font-size: 2.5rem;
+    padding: 2rem;
+  }
+}

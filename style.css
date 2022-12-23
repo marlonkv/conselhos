@@ -1,0 +1,84 @@
+@import './css/utilidades.css';
+@import './css/mobile.css';
+
+body {
+  background-color: #20B662;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  
+  margin: 0px;
+}
+
+.tela {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  max-width: 1000px;
+  margin: 0px auto;
+}
+
+.title {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  font-size: 2rem;
+  color: #165A34;
+  font-weight: bold;
+}
+
+.text {
+  font-size: 4rem;
+  color: #F4FF4C;
+  display: flex;
+  justify-content: center;
+}
+
+
+.animacaoTexto {
+  animation: animacao .5s;
+}
+
+@keyframes animaTexto {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20px, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+ }
+
+.mensage {
+  text-align: center;
+  margin-top: 5rem;
+  color: green;
+}
+
+
+.loading {
+  height: 40px;
+  width: 40px;
+  background-color: none;
+  display: block;
+  border-radius: 50%;
+  border: 13px solid green;
+  border-top: 12px solid transparent;
+  animation: anima 1s linear infinite;
+}
+
+@keyframes anima {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.main {
+  position: relative;
+}
