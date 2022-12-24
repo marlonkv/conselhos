@@ -11,19 +11,21 @@ async function frase() {
 }
 frase();
 
-window.addEventListener('click', () => {
-  window.location.reload();
-});
+['click', 'touchstart'].forEach((e) => {
+  window.addEventListener(e, () => {
+    window.location.reload();
+  });
 
-if (window.innerWidth > 800) {
-  texto.addEventListener('mouseover', (event) => {
-    message.classList.add('block');
-  });
-  window.addEventListener('mouseover', (event) => {
-    if (event.target.getAttribute('data-tela') === 'true') {
-      message.classList.remove('block');
-    }
-  });
-}
+  if (window.innerWidth > 800) {
+    texto.addEventListener('mouseover', (event) => {
+      message.classList.add('block');
+    });
+    window.addEventListener('mouseover', (event) => {
+      if (event.target.getAttribute('data-tela') === 'true') {
+        message.classList.remove('block');
+      }
+    });
+  }
+});
 
 console.log();
